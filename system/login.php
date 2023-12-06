@@ -13,14 +13,14 @@
          <form action="" method="" class="mt-5">
         <h2 class="mb-4">Login to System</h2>
     <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-  <label for="floatingInput">Email address</label>
+  <input type="text" class="form-control" id="floatingInput"name="username" placeholder="Enter Your name">
+  <label for="floatingInput">User Name</label>
 </div>
 <div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+  <input type="password" class="form-control" id="floatingPassword" name="password"placeholder="Password">
   <label for="floatingPassword">Password</label>
 </div>
-   <button type="submit" class="btn btn-success mt-4"> Submit</button>
+   <button type="submit" class="btn btn-success mt-4">Login</button>
 </form>
          </div>
     </div>
