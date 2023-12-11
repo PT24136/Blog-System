@@ -20,7 +20,7 @@
   <label for="floatingInput">User Name</label>
 </div>
 <div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" name="password"placeholder="Password">
+  <input type="text" class="form-control" id="floatingPassword" name="password"placeholder="Password">
   <label for="floatingPassword">Password</label>
 </div>
   <?php 

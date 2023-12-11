@@ -1,6 +1,6 @@
 <?php
      session_start();
-     include( 'helpers/connection.php');
+     include('helpers/connection.php');
    if(isset($_POST['username'])){
        $username = $_POST['usernmae'];
        $password = $_POST['password'];
