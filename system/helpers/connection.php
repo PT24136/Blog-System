@@ -1,6 +1,6 @@
 <?php
    try {
-$pdo = new PDO("mysql:host=$servername;dbname=the_prateek", "root","");
+$pdo = new PDO("mysql:host=localhost;dbname=the_prateek", "root","");
     // set the PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //echo "Connected successfully";
