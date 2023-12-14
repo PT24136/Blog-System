@@ -5,6 +5,12 @@
 .menu a{
     padding: 10px 20px;
 } */
-.bodys{
-    background-color: pink;
+.body{
+    background-color:aliceblue;
+}
+.form-group{
+    margin-bottom : 30px;
+}
+.form-group label{
+    margin-bottom: 50px;
 }
