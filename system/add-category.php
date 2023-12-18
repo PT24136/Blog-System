@@ -7,9 +7,9 @@ include("header.php");
 <h3>Add Blog Category</h3>
 <div class="w-25">
     <?php
+     include('helpers/connection.php'); 
     if (isset($_POST['name'])) {
-        include('helpers/conection.php');
-        $name = htmlspecialchars($_post['name']);
+        $name = htmlspecialchars($_POST['name']);
         if ($name == null) {
             $error = "Please enter category name";
         }
@@ -30,7 +30,7 @@ include("header.php");
     <form action="" method="POST">
         <div class="form-group">
             <label>Title of the Category</label>
-            <input type="text" name="name" class="form-control" placeholder="enter category tittle">
+            <input type="text" name="name" class="form-control" placeholder="Enter category tittle" autofocus>
         </div>
         <?php 
         if (isset($error)) {
