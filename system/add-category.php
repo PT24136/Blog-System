@@ -13,19 +13,21 @@ include("header.php");
         if ($name == null) {
             $error = "Please enter category name";
         }
-        //slug
-        $slug = strtolower($name);
-        $slug = str_replace("","-","$slug");
-        $sql = "insert into categories(name,slug) value(:name, :slug)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindparam(":name",$name);
-        $stmt->bindparam(":slug",$slug);
-         if($stmt->execute()===true){
-             $success = "Category has been created ";
-         }else{
-             $error = $stmt->errorinfo();
-         }
-    }
+        else{
+            //slug
+            $slug = strtolower($name);
+            $slug = str_replace("","-","$slug");
+            $sql = "insert into categories(name,slug) value(:name, :slug)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindparam(":name",$name);
+            $stmt->bindparam(":slug",$slug);
+             if($stmt->execute()===true){
+                 $success = "Category has been created ";
+             }else{
+                 $error = $stmt->errorinfo();
+             }
+        };
+        }
     ?>
     <form action="" method="POST">
         <div class="form-group">
