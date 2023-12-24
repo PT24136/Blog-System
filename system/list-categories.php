@@ -5,14 +5,14 @@ include("header.php");
 ?>
 
 <h3>List Blog Category</h3>
-<div class="w-30">
+<div class="w-100">
     <?php
-       include('helpers/connection.php');
-       $sql = "select * from categories";
+      include('helpers/function.php');
+       $sql = "select * from categories order by category_id desc";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
         $categories = $stmt->fetchAll();
-        var_dump($categories);
+       
     ?>
    <table class="table table-striped table-dark"> 
    <tr>
@@ -21,6 +21,22 @@ include("header.php");
          <th>Slug</th>
          <th>Actions</th>
 </tr>
+      <?php
+          $count = 1;
+        foreach($categories as $cat){
+         echo "<tr>";
+            echo "<td>$count</td>";
+            echo "<td>".$cat['name']."</td>";
+            echo "<td>".$cat['slug']."</td>";
+            echo "<td>
+         <a href='update-category?category_id=".encode($cat['category_id'])."'>Edit</a> |
+      <a href='delete-category?category_id=".encode($cat['category_id'])."' class= 'text-danger'>Delete</a>
+
+            </td>";
+         echo "</tr>";
+         $count++;
+        }
+      ?>
    </table>
   
 </div>
